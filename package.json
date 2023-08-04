@@ -1,6 +1,6 @@
 {
   "name": "@dittofeed/sdk-node",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Dittofeed's node sdk.",
   "main": "dist/cjs/index.js",
   "module": "dist/ejs/index.js",
