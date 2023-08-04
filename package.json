@@ -1,0 +1,31 @@
+{
+  "name": "@dittofeed/sdk-node",
+  "version": "0.0.0",
+  "description": "Dittofeed's node sdk.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/ejs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dittofeed/sdk-node.git"
+  },
+  "author": "max@dittofeed.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "typescript": "^5.1.0"
+  },
+  "packageManager": "yarn@3.6.0",
+  "dependencies": {
+    "@dittofeed/sdk-js-base": "^0.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
