@@ -9,7 +9,7 @@
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "lib": ["esnext"],
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
