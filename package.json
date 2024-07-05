@@ -8,7 +8,6 @@
   "files": [
     "dist/"
   ],
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dittofeed/sdk-node.git"
@@ -24,7 +23,7 @@
     "@types/node-fetch": "^2.6.4",
     "typescript": "^5.1.0"
   },
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "yarn@4.1.1",
   "dependencies": {
     "@dittofeed/sdk-js-base": "^0.1.0",
     "node-fetch": "^2.6.12"
