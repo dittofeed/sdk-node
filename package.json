@@ -5,6 +5,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/ejs/index.js",
   "types": "dist/cjs/index.d.ts",
+  "private": false,
   "files": [
     "dist/"
   ],
