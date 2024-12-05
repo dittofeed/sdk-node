@@ -8,9 +8,12 @@ import {
 } from "@dittofeed/sdk-js-base";
 import fetch from "cross-fetch";
 
-jest.mock("cross-fetch");
+jest.mock("cross-fetch", () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
-const mockedFetch = fetch as jest.MockedFunction<typeof fetch>;
+const mockedFetch = fetch as jest.Mock;
 
 describe("DittofeedSdk", () => {
   const initParams: InitParamsDataBase = {
@@ -21,10 +24,12 @@ describe("DittofeedSdk", () => {
     DittofeedSdk["instance"] = null;
     const { Response } = jest.requireActual("cross-fetch");
 
-    mockedFetch.mockResolvedValue(
-      new Response("", {
-        status: 200,
-      })
+    mockedFetch.mockImplementation(() =>
+      Promise.resolve(
+        new Response("", {
+          status: 200,
+        })
+      )
     );
   });
 

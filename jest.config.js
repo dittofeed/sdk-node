@@ -4,9 +4,10 @@ module.exports = {
   preset: "ts-jest",
   clearMocks: true,
   testEnvironment: "node",
-  testMatch: ["**/?(*.)+(spec|test).[tj]s?(x)"],
+  testMatch: ["<rootDir>/src/**/?(*.)+(spec|test).[tj]s?(x)"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  testPathIgnorePatterns: ["/node_modules/", "/dist/"],
 };
