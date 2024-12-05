@@ -6,8 +6,8 @@ import {
   ScreenData,
   PageData,
 } from "@dittofeed/sdk-js-base";
-import { randomUUID } from "crypto";
-import fetch from "node-fetch";
+import { v4 as uuidv4 } from "uuid";
+import fetch from "cross-fetch";
 
 export * from "@dittofeed/sdk-js-base";
 
@@ -71,7 +71,7 @@ export class DittofeedSdk {
     initParams: InitParamsDataBase
   ): DittofeedSdkBase<TimeoutHandle> {
     return new DittofeedSdkBase({
-      uuid: () => randomUUID(),
+      uuid: () => uuidv4(),
       issueRequest: async (
         data,
         { host = "https://dittofeed.com", writeKey }
